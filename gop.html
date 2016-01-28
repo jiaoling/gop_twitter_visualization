@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+     	<script src="gop_computed.js"></script>
+     	<script scr="GOP_tweet_data.js"></script>
+     	<script src="cluster_data2.js"></script>
+
+     	<script src="https://cdnjs.cloudflare.com/ajax/libs/simple-statistics/1.0.0/simple_statistics.min.js"></script>
+     	<script src="http://ils.unc.edu/~gotz/courses/js/d3-tip.js"></script>
+      
+    	<link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+    	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+    	<link type="text/css" rel="stylesheet" href= "stylesheet.css">
+
+      <link rel="stylesheet" type="text/css" href="http://ils.unc.edu/~gotz/courses/js/d3-tip.css">
+
+    	<title>GOP Debate Visualization</title>
+
+		<meta charset="UTF-8">
+		<style>
+/* Added this to css style sheet as #trend_line svg {} */
+/* That way it only affects the svg canvas in the trendline section */
+/*svg {
+  font: 10px sans-serif;
+}*/
+
+p {
+  font-family: 'Source Sans Pro';
+  font-size: 12px;
+  text-align: justify;
+  width: 700px;
+  margin: auto;
+}
+h5 {
+  font-family: 'Oxygen';
+  font-size: 13px;
+  text-align: center;
+  width: 900px;
+  margin: auto;
+}
+#home {cursor: pointer;}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path,
+.y.axis path {
+  fill:none;
+  stroke:black;
+  stroke-width: 2px;
+  shape-rendering: crispEdges;
+}
+
+.zero_line{
+  stroke:black;
+  stroke-width: 2px;
+  stroke-dasharray:5,5;
+}
+.line {
+  fill: none;
+  stroke-width: 4px;
+}
+
+
+.svg:image{
+  pointer-events: none;
+}
+.text{
+  pointer-events:none;
+}
+
+
+		</style>
+
+   </head>
+   <body>
+
+    	<!-- Header -->
+   		<header>
+            <h1 id="home" > GOP Debate Visualization </h1>
+      </header>
+
+
+<!-- Synopsis -->
+<br/>
+<h5>
+This page visualizes the Twitter response to the August 6, 2015, Fox News Republican Debate.</h5><br/>
+<h5>
+Select a candidate to start exploring the data.
+</h5><br/>
+
+<!-- CREATE CANDIDATE SELECTION BOXES -->
+      	<div id="cand_select"> 
+      </div>
+
+      	<div id="trend_container">
+<!-- CREATE TRENDLINE-->
+			<div id="trend_line">
+			</div>
+		</div>
+
+      	<div id="cluster_container">
+<!-- CREATE CLUSTER DIAGRAM-->
+			<div id="cluster_diagram">
+			</div>
+		</div>
+
+    <!-- DRAW CANVAS -->
+     <script>
+      		// pull the data into arrays(if we use js file)
+      		// var candidate = GOP_tweet_data.map(function(d) {return d.candidate ;});
+      		// var sentiment = GOP_tweet_data.map(function(d) {return d.sentiment ;});
+      		// var topic = GOP_tweet_data.map(function(d) {return d.subject_matter ;});
+      		// var created_time = GOP_tweet_data.map(function(d) {return d.tweet_created ;});
+      		var vis = new Vis();
+	 </script>
+<br/>
+<p>  We've only included data from the top 10 polling candidates at the time, who participated in the 9pm debate (an additional debate starting at 5pm on the same date involved lower polling candidates)</p><br />
+
+<p>We've calculated the number of positive and negative Tweets concerning each candidate and charted their overall sentiment score (the number of positive Tweets - number of negative Tweets) for each minute of the debate (note that we've excluded neutral tweets). At the bottom of the page, you can view candidates clustered by the topics with which they were frequently mentioned on Twitter to analyze which candidates Twitter users view as most similar and dissimilar. 
+</p> <br />
+
+	 <footer>
+	 	<div>
+	 	<p>The data used in this visualization comes from <a href="http://www.crowdflower.com/blog/gop-debate">CrowdFlower Data for Everyone</a></p>
+	 </div>
+	 </footer>
+	
+
+
+</body>
+</html>

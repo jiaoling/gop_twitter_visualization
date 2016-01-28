@@ -1,0 +1,118 @@
+header {
+  margin-top: -25px;
+  height: 100px;
+  min-width: 100%;
+  background: #05314e;
+  font-family: 'Oxygen', sans-serif;
+}
+
+footer {
+  margin-bottom: -25px;
+  height: 50px;
+  min-width: 100%;
+  background: #05314e;
+  color: white;
+}
+
+footer div {
+	margin: auto;
+	text-align: center;
+}
+
+a {
+	color: #fdcc66;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+h1{
+	padding:30px;
+	color: #fffeff;
+}
+
+h2 {
+	font-family: 'Oxygen', sans-serif;
+	color: #05314e;
+}
+
+h3 {
+	font-family: 'Source Sans Pro', sans-serif;
+	color: white;
+	text-align: center;
+}
+
+.sample_div {
+	border: 2px solid #05314e;
+	background-color: #f28e93;
+    padding: 5px;
+    width: 150px;
+    height: 225px; 
+    color: black;
+    float: left;
+    margin: 10px;
+}
+
+.sentiment {
+	    overflow: hidden;
+	    font-weight: bold;
+	    font-size: 20px;
+}
+
+.positive {
+	color: green;
+	float: left;
+	margin: 12%;
+}
+
+.negative {
+	color: #e51d27;
+	float: left;
+	margin: 12%;
+}
+
+img {
+	display: block;
+	margin: auto;
+	height: 100px;
+	width: 75px;
+}
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	width: 1040px;
+	display:block;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+#cand_select {
+	overflow: hidden;
+	margin: 10px;
+}
+
+#trend_container {
+ 	height: 600px;
+ 	margin: 10px;
+}
+
+#bio {
+  	float: left;
+	position: relative;
+}
+
+
+#topics {
+  	float: left;
+	position: relative;
+	margin-left: 10px;
+}
+
+#multiples
+	{
+	overflow: hidden;
+	margin: 10px;
+	}
